@@ -1,9 +1,9 @@
-import { MuiListInferencer } from "@refinedev/inferencer/mui";
+import { MuiCreateInferencer } from "@refinedev/inferencer/mui";
 import { GetServerSideProps } from "next";
 import { authProvider } from "src/authProvider";
 
-export default function BlogPostList() {
-  return <MuiListInferencer />;
+export default function ImovelCreate() {
+  return <MuiCreateInferencer />;
 }
 
 export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
     return {
       props: {},
       redirect: {
-        destination: `${redirectTo}?to=${encodeURIComponent("/blog-posts")}`,
+        destination: `${redirectTo}?to=${encodeURIComponent("/imovel")}`,
         permanent: false,
       },
     };

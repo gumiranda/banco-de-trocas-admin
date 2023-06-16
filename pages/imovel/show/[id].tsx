@@ -2,7 +2,7 @@ import { MuiShowInferencer } from "@refinedev/inferencer/mui";
 import { GetServerSideProps } from "next";
 import { authProvider } from "src/authProvider";
 
-export default function CategoryShow() {
+export default function ImovelShow() {
   return <MuiShowInferencer />;
 }
 
@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
     return {
       props: {},
       redirect: {
-        destination: `${redirectTo}?to=${encodeURIComponent("/categories")}`,
+        destination: `${redirectTo}?to=${encodeURIComponent("/imovel")}`,
         permanent: false,
       },
     };
